@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-body">
+<div class="page-wrapper">
+    <header class="page-header">
+        <div class="page-header__col-1">
+            <nav class="nav-bar">
+                <a class="nav-bar__link" href="#contacts">CONTACTS</a>
+                <a class="nav-bar__link" href="#about">ABOUT ME</a>
+                <a class="nav-bar__link" href="#skills">SKILLS</a>
+                <a class="nav-bar__link" href="#code">CODE EXAMPLE</a>
+                <a class="nav-bar__link" href="#projects">MY PROJECTS</a>
+                <a class="nav-bar__link" href="#education">EDUCATION</a>
+                <a class="nav-bar__link" href="#languages">LANGUAGES</a>
+            </nav>
+            <h1 class="page-header__name">Artyom Krasnitsky</h1>
+        </div>
+        <div class="page-header__col-2">
+            <img class="page-header__img" src="sample.jpg" width="100%">
+        </div>
+    </header>
+    <main class="main">
+        <section class="contacts" id="contacts">
+            <h2 class="contacts__title">Contacts</h2>
+            <div class="contacts__photo"></div>
+            <p>Phone: +375447527660</p>
+            <p>Email: tyomik.krasnitsky@gmail.com</p>
+            <p>GitHub: <a href="https://github.com/ArtyomKr">ArtyomKr</a></p>
+        </section>
+        <section class="about" id="about">
+            <h2 class="about__title">About me</h2>
+            <p>I was just another student at BSUIR when I first started learning about web-development. Since then, I grew
+                to love this ever-changing and diverse world of frameworks, languages and, of course, opportunities.
+            </p>
+            <p>My technical background and desire to learn provided me enough momentum to learn a lot by myself, but I feel
+                that right now, I might greatly benefit from gaining more practical experience. A year ago, I worked on an
+                open source project as a frontend developer for 3 months. There I learned a lot of problem-solving skills as
+                well as gained great respect for all open source/non-commercial products and for the inspired people working
+                on them.</p>
+            <p>Right now I’m working as a design engineer in a R&D bureau, designing advanced printed circuit boards for
+                high-precision measuring devices, but I decided to change my field of work in a next year or two. My current
+                work requires a lot of concentration and an ability to multi-task, since you need to consider many factors
+                while designing a circuit board and even one mistake can lead to a whole device working incorrectly.</p>
+            <p>I hope my abilities, knowledge and desire to learn will help me find new employment opportunities in the
+                future.</p>
+        </section>
+        <section class="skills" id="skills">
+            <h2 class="skills__title">Skills</h2>
+            <ul class="skills__list">
+                <li>JavaScript</li>
+                <li>HTML, CSS</li>
+                <li>React, Redux</li>
+                <li>Node.js, Express</li>
+                <li>Figma</li>
+                <li>Git</li>
+            </ul>
+        </section>
+        <section class="code" id="code">
+            <h2 class="code__title">Code example</h2>
+            <pre>
+function compose(f,g) {
+    return (...a) => f(g(...a));
+}
+        </pre>
+        </section>
+        <section class="projects" id="projects">
+            <h2 class="projects__title">My projects</h2>
+            <article class="project">
+                <h3 class="project__title"></h3>
+                <div class="project__preview"></div>
+                <p class="project__description"></p>
+            </article>
+        </section>
+        <section class="education" id="education">
+            <h2 class="education__title">Education</h2>
+            <ul class="education__list">
+                <li>
+                    Belarusian State University of Informatics and Radioelectronics
+                    <ul class="education__sublist">
+                        <li>Major in Computer-Aided Design of Electronic Devices</li>
+                    </ul>
+                </li>
+                <li>
+                    Courses:
+                    <ul>
+                        <li>
+                            HTML/CSS courses from <a href="https://webref.ru/">webref</a>
+                        </li>
+                        <li>
+                            JavaScript from <a href="https://learn.javascript.ru/">learn.javascript</a>
+                        </li>
+                        <li>
+                            React and Redux from <a href="https://learn-reactjs.ru/home">learn-reactjs</a>
+                        </li>
+                        <li>
+                            Node.js and Express from <a href="https://coursehunter.net/course/nodejs-v2-udemy">here</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="languages" id="languages">
+            <h2 class="languages__title">Languages</h2>
+            <ul class="languages__list">
+                <li>Russian - native</li>
+                <li>English - B2</li>
+                <li>Belarusian - ❤</li>
+            </ul>
+        </section>
+    </main>
+</div>
+
+</body>
+</html>
