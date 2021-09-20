@@ -1,1 +1,1 @@
-https://ArtyomKr.github.io/rsschool-cv/cv
+https://ArtyomKr.github.io/rsschool-cv/
