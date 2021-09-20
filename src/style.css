@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #6D6D6D;
+    font-weight: bold;
+}
+
+.page-body {
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    color: #6D6D6D;
+
+    margin: 0 1%;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.page-header__inner {
+    display: flex;
+    align-items: flex-start;
+
+    margin-left: 15%;
+
+    background: #F6F6F6;
+}
+
+.hamburger-menu {
+    width: 50%;
+}
+
+.nav-bar {
+    margin: 5% 0 0 20%;
+}
+
+.nav-bar__link {
+    display: block;
+
+    color: #000000;
+    letter-spacing: 6px;
+    text-decoration: none;
+    font-weight: normal;
+
+    transition-duration: .25s;
+}
+
+.nav-bar__link:hover {
+    background-color: #FFE8E8;
+}
+
+.page-header__name {
+    max-width: 50%;
+    height: 0;
+    position: relative;
+    top: -200px;
+    margin: 0 1rem 0 5%;
+
+    font-size: 5rem;
+    line-height: 80px;
+    color: #999999;
+}
+
+.page-header__img {
+    width: 50%;
+}
+
+.page-main {
+    margin: auto;
+    width: 90%;
+}
+
+.section__title {
+    margin: 30px 0 20px 0;
+
+    font-size: 3rem;
+    color: #999999;
+}
+
+.section__code {
+    margin: 0;
+}
+
+.section__code .hljs {
+    background: #F6F6F6;
+}
+
+.section__list {
+    margin: 0;
+}
+
+.project {
+    display: inline-block;
+    margin: 0 0 5% 0;
+}
+
+.project__preview {
+    width:100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.project:nth-child(even) .project__preview-link {
+    max-height: 470px;
+    float: left;
+    width: 60%;
+    margin-right: 6%;
+}
+
+.project:nth-child(odd) .project__preview-link {
+    max-height: 470px;
+    float: right;
+    width: 60%;
+    margin-left: 6%;
+}
+
+.project:nth-child(odd) .project__description {
+    text-align: right;
+}
+
+.project:last-child {
+    margin-bottom: 0;
+}
+
+.page-footer {
+    margin-top: 50px;
+
+    background: #F6F6F6;
+}
+
+.page-footer__inner {
+    margin: 10px auto;
+    width: 50%;
+
+    text-align: center;
+}
+
+.page-footer__logos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#menu__toggle {
+    display: none;
+}
+
+@media (max-width: 900px) or (max-device-width: 900px){
+    .page-header__name {
+        top: -15vw;
+        max-width: 100%;
+        margin-right: 0;
+
+        font-size: 9vw;
+    }
+
+    .page-header__inner {
+        padding-bottom: 15vw;
+    }
+}
+
+@media (max-width: 650px) or (max-device-width: 650px){
+    .page-header__img {
+        width: 83%;
+    }
+
+    .menu__btn {
+        display: flex;
+        align-items: center;
+
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 26px;
+        height: 26px;
+
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #000000;
+        transition-duration: .25s;
+    }
+    .menu__btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menu__btn > span::after {
+        content: '';
+        top: 8px;
+    }
+
+    .nav-bar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        visibility: hidden;
+
+        margin: 0;
+        padding: 80px 0;
+        height: 100%;
+        z-index: 1;
+
+        background: #F6F6F6;
+        box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
+
+        transition-duration: .25s;
+    }
+
+    .nav-bar__link {
+        padding: 10px 30px;
+    }
+
+    .nav-bar__link:hover {
+        background-color: #FFE8E8;
+    }
+
+    #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .nav-bar {
+        visibility: visible;
+        left: 0;
+    }
+}

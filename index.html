@@ -3,39 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>CV</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body class="page-body">
 <div class="page-wrapper">
-    <div class="header-wrapper"></div>
     <header class="page-header">
-        <div class="page-header__col-1">
-            <nav class="nav-bar">
-                <a class="nav-bar__link" href="#contacts">CONTACTS</a>
-                <a class="nav-bar__link" href="#about">ABOUT ME</a>
-                <a class="nav-bar__link" href="#skills">SKILLS</a>
-                <a class="nav-bar__link" href="#code">CODE EXAMPLE</a>
-                <a class="nav-bar__link" href="#projects">MY PROJECTS</a>
-                <a class="nav-bar__link" href="#education">EDUCATION</a>
-                <a class="nav-bar__link" href="#languages">LANGUAGES</a>
-            </nav>
-            <h1 class="page-header__name">Artyom Krasnitsky</h1>
+        <div class="page-header__inner">
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+                <nav class="nav-bar">
+                    <a class="nav-bar__link" href="#contacts">CONTACTS</a>
+                    <a class="nav-bar__link" href="#about">ABOUT ME</a>
+                    <a class="nav-bar__link" href="#skills">SKILLS</a>
+                    <a class="nav-bar__link" href="#code">CODE EXAMPLE</a>
+                    <a class="nav-bar__link" href="#projects">MY PROJECTS</a>
+                    <a class="nav-bar__link" href="#education">EDUCATION</a>
+                    <a class="nav-bar__link" href="#languages">LANGUAGES</a>
+                </nav>
+            </div>
+            <img class="page-header__img" src="sample.jpg" alt="my pretty face">
         </div>
-        <div class="page-header__col-2">
-            <img class="page-header__img" src="sample.jpg" width="100%">
-        </div>
+        <h1 class="page-header__name">Artyom Krasnitsky</h1>
     </header>
-    <main class="main">
-        <section class="contacts" id="contacts">
-            <h2 class="contacts__title">Contacts</h2>
-            <div class="contacts__photo"></div>
-            <p>Phone: +375447527660</p>
-            <p>Email: tyomik.krasnitsky@gmail.com</p>
-            <p>GitHub: <a href="https://github.com/ArtyomKr">ArtyomKr</a></p>
+    <main class="page-main">
+        <section class="section" id="contacts">
+            <h2 class="section__title">Contacts</h2>
+            <ul class="section__list">
+                <li><p><b>Phone:</b> +375447527660</p></li>
+                <li><p><b>Email:</b> tyomik.krasnitsky@gmail.com</p></li>
+                <li><p><b>GitHub:</b> <a href="https://github.com/ArtyomKr">ArtyomKr <img src="src/img/github-logo.svg" width="23" alt="git-link"></a></p></li>
+            </ul>
+
         </section>
         <section class="about" id="about">
-            <h2 class="about__title">About me</h2>
-            <p>I was just another student at BSUIR when I first started learning about web-development. Since then, I grew
+            <h2 class="section__title">About me</h2>
+            <p>I was just another student at BSUIR when I first started learning about web-development. Since then I grew
                 to love this ever-changing and diverse world of frameworks, languages and, of course, opportunities.
             </p>
             <p>My technical background and desire to learn provided me enough momentum to learn a lot by myself, but I feel
@@ -50,9 +58,39 @@
             <p>I hope my abilities, knowledge and desire to learn will help me find new employment opportunities in the
                 future.</p>
         </section>
-        <section class="skills" id="skills">
-            <h2 class="skills__title">Skills</h2>
-            <ul class="skills__list">
+        <section class="section" id="projects">
+            <h2 class="section__title">My projects</h2>
+            <article class="project">
+                <a class="project__preview-link" href="https://github.com/ArtyomKr/mapa" target="_blank">
+                    <img class="project__preview" src="src/img/mapa.png" alt="mapa screen">
+                </a>
+                <div class="project__description">
+                    <h3 class="project__title">Mapa project</h3>
+                    <p>I worked as a frontend-developer on this project. Mapa is an open-source interactive map for local initiatives and volunteers. It is based on React + Redux, and uses OpenStreetMaps API to fetch map data. Users can add customizable pins on a map or search for already existing entries. </p>
+                </div>
+            </article>
+            <article class="project">
+                <a class="project__preview-link" href="https://github.com/ArtyomKr/hospital-app" target="_blank">
+                    <img class="project__preview" src="src/img/hospitalapp-screen.png"  alt="hospital-app screen">
+                </a>
+                <div class="project__description">
+                    <h3 class="project__title">Hospital app</h3>
+                    <p>My first React project. Made using React and Redux with SCSS for styling. Users can check events, schedule of appointments and contact info for doctors.</p>
+                </div>
+            </article>
+            <article class="project">
+                <a class="project__preview-link" href="https://github.com/ArtyomKr/node-chat-app" target="_blank">
+                    <img class="project__preview" src="src/img/chatapp.png" alt="node-chat screen">
+                </a>
+                <div class="project__description">
+                    <h3 class="project__title">Node chat app</h3>
+                    <p>A simple online chatting app made with Node.js and Express. Users can create or join existing rooms, send text messages and share geolocation data.</p>
+                </div>
+            </article>
+        </section>
+        <section class="section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <ul class="section__list">
                 <li>JavaScript</li>
                 <li>HTML, CSS</li>
                 <li>React, Redux</li>
@@ -61,28 +99,22 @@
                 <li>Git</li>
             </ul>
         </section>
-        <section class="code" id="code">
-            <h2 class="code__title">Code example</h2>
-            <pre>
+        <section class="section" id="code">
+            <h2 class="section__title">Code example</h2>
+            <figure class="section__code">
+               <pre ><code>
 function compose(f,g) {
     return (...a) => f(g(...a));
 }
-        </pre>
+        </code></pre>
+            </figure>
         </section>
-        <section class="projects" id="projects">
-            <h2 class="projects__title">My projects</h2>
-            <article class="project">
-                <h3 class="project__title"></h3>
-                <div class="project__preview"></div>
-                <p class="project__description"></p>
-            </article>
-        </section>
-        <section class="education" id="education">
-            <h2 class="education__title">Education</h2>
-            <ul class="education__list">
+        <section class="section" id="education">
+            <h2 class="section__title">Education</h2>
+            <ul class="section__list">
                 <li>
                     Belarusian State University of Informatics and Radioelectronics
-                    <ul class="education__sublist">
+                    <ul class="section__sublist">
                         <li>Major in Computer-Aided Design of Electronic Devices</li>
                     </ul>
                 </li>
@@ -105,15 +137,24 @@ function compose(f,g) {
                 </li>
             </ul>
         </section>
-        <section class="languages" id="languages">
-            <h2 class="languages__title">Languages</h2>
-            <ul class="languages__list">
+        <section class="section" id="languages">
+            <h2 class="section__title">Languages</h2>
+            <ul class="section__list">
                 <li>Russian - native</li>
                 <li>English - B2</li>
                 <li>Belarusian - ❤</li>
             </ul>
         </section>
     </main>
+    <footer class="page-footer">
+        <div class="page-footer__inner">
+            <p>©2021 by Artyom Krasnitsky</p>
+            <div class="page-footer__logos">
+                <a href="https://github.com/ArtyomKr"><img src="src/img/github-logo.svg" width="50" alt="git-link"></a>
+                <a href="https://rs.school/js/"><img src="src/img/rs_school-logo.svg" width="120" alt="rsschool-link"></a>
+            </div>
+        </div>
+    </footer>
 </div>
 
 </body>
