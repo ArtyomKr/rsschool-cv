@@ -127,6 +127,37 @@ a {
     margin: 0;
 }
 
+.job-list {
+    padding: 0;
+}
+
+.job {
+    display: flex;
+    align-items: baseline;
+}
+
+.job__intro {
+    width: 30%;
+}
+
+.job__details {
+    width: 70%;
+}
+
+.job__company {
+    font-size: 1.3em;
+}
+
+.job__date {
+    font-size: 0.8em;
+    color: #7E7C7C;
+    text-transform: uppercase;
+}
+
+.job__title {
+    font-weight: 600;
+}
+
 .project {
     display: inline-block;
     margin: 0 0 5% 0;
