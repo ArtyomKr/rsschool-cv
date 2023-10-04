@@ -66,14 +66,15 @@ a {
 }
 
 .header-content__name {
+    margin-bottom: 0.2em;
     font-size: 5em;
-    line-height: 80px;
+    line-height: 1em;
     color: #999999;
 }
 
 .header-content__name__sub {
-    font-size: 0.6em;
-    line-height: 40px;
+    font-size: 0.5em;
+    line-height: 1.5em;
 }
 
 .page-header__img {
@@ -192,12 +193,20 @@ a {
         font-size: 12px;
     }
 
+    .header-content__name__sub {
+        font-size: 0.6em;
+    }
+
     .page-header__inner {
         padding-bottom: 15vw;
     }
 }
 
-@media (max-width: 650px){
+@media (max-width: 620px) {
+    .section__title {
+        font-size: 2rem;
+        margin: 10px 0 5px 0;
+    }
     .page-body {
         margin: 0;
     }
@@ -208,6 +217,18 @@ a {
 
     .page-header__img {
         width: 83%;
+    }
+
+    .job {
+        flex-direction: column;
+    }
+
+    .job__intro {
+        width: auto;
+    }
+
+    .job__details {
+        width: auto;
     }
 
     .project__preview-link {
@@ -290,12 +311,5 @@ a {
     #menu__toggle:checked ~ .nav-bar {
         visibility: visible;
         left: 0;
-    }
-}
-
-@media (max-width: 400px) {
-    .section__title {
-        font-size: 2rem;
-        margin: 10px 0 5px 0;
     }
 }
