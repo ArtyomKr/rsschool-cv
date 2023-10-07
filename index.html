@@ -6,7 +6,6 @@
     <title>Artyom Krasnitsky</title>
     <link rel="stylesheet" href="src/style.css">
     <link rel="icon" href="./src/img/briefcase_icon.png">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
 </head>
 <body class="page-body">
 <div class="page-wrapper">
@@ -21,7 +20,6 @@
                     <a class="nav-bar__link" href="#contacts">CONTACTS</a>
                     <a class="nav-bar__link" href="#about">ABOUT ME</a>
                     <a class="nav-bar__link" href="#skills">SKILLS</a>
-                    <a class="nav-bar__link" href="#code">CODE EXAMPLE</a>
                     <a class="nav-bar__link" href="#projects">MY PROJECTS</a>
                     <a class="nav-bar__link" href="#education">EDUCATION</a>
                     <a class="nav-bar__link" href="#languages">LANGUAGES</a>
@@ -89,17 +87,6 @@
             <p>I was just another student at BSUIR when I first started learning about web-development. Since then I grew
                 to love this ever-changing and diverse world of frameworks, languages and, of course, opportunities.
             </p>
-            <p>My technical background and desire to learn provided me enough momentum to learn a lot on my own, but I feel
-                that right now, I might greatly benefit from gaining more practical experience. A year ago, I worked on an
-                open source project as a frontend developer for 3 months. There I learned a lot of problem-solving skills as
-                well as gained great respect for all open source/non-commercial products and for the inspired people working
-                on them.</p>
-            <p>Right now I’m working as a design engineer in a R&D bureau, designing advanced printed circuit boards for
-                high-precision measuring devices, but I decided to change my field of work in a next year or two. My current
-                work requires a lot of concentration and ability to multi-task, since you need to consider many factors
-                while designing a circuit board and even one mistake can lead to a whole device working incorrectly.</p>
-            <p>I hope my abilities, knowledge and desire to learn will help me find new employment opportunities in the
-                future.</p>
         </section>
         <section class="section" id="projects">
             <h2 class="section__title">My projects</h2>
@@ -169,16 +156,6 @@
                 <li>Git</li>
             </ul>
         </section>
-        <section class="section" id="code">
-            <h2 class="section__title">Code example</h2>
-            <figure class="section__code">
-               <pre ><code>
-function compose(f,g) {
-    return (...a) => f(g(...a));
-}
-        </code></pre>
-            </figure>
-        </section>
         <section class="section" id="education">
             <h2 class="section__title">Education</h2>
             <ul class="section__list">
@@ -219,31 +196,8 @@ function compose(f,g) {
     <footer class="page-footer">
         <div class="page-footer__inner">
             <p>©2021 by Artyom Krasnitsky</p>
-            <div class="page-footer__logos">
-                <a href="https://github.com/ArtyomKr" target="_blank"><img src="src/img/github-logo.svg" width="50" alt="git-link"></a>
-                <a href="https://rs.school/js/" target="_blank"><img src="src/img/rs_school-logo.svg" width="120" alt="rsschool-link"></a>
-            </div>
         </div>
     </footer>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-<script>
-  console.log('Самооценка: 150/150:\n' +
-  '- вёрстка валидная +10\n' +
-  '- вёрстка семантическая +20\n' +
-  '- для оформления СV используются css-стили +10\n' +
-  '- контент размещается в блоке, который горизонтально центрируется на странице +10\n' +
-  '- вёрстка адаптивная +10\n' +
-  '- есть адаптивное бургер-меню +10\n' +
-  '- на странице СV присутствует изображение +10\n' +
-  '- контакты для связи и перечень навыков оформлены в виде списка +10\n' +
-  '- CV содержит информацию об авторе +10\n' +
-  '- CV содержит пример кода +10\n' +
-  '- CV содержит изображения-ссылки на выполненные проекты +10\n' +
-  '- CV выполнено на английском языке +10\n' +
-  '- выполнены требования к Pull Request +10\n' +
-  '- дизайн адекватен +10');
-</script>
 </body>
 </html>

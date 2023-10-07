@@ -203,12 +203,6 @@ a {
     text-align: center;
 }
 
-.page-footer__logos {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
 #menu__toggle {
     display: none;
 }
