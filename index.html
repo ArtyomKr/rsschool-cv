@@ -18,19 +18,19 @@
                 </label>
                 <nav class="nav-bar">
                     <a class="nav-bar__link" href="#contacts">CONTACTS</a>
-                    <a class="nav-bar__link" href="#employment history">EMPLOYMENTS</a>
                     <a class="nav-bar__link" href="#about">ABOUT ME</a>
+                    <a class="nav-bar__link" href="#employment history">EMPLOYMENTS</a>
                     <a class="nav-bar__link" href="#skills">SKILLS</a>
-                    <a class="nav-bar__link" href="#projects">MY PROJECTS</a>
                     <a class="nav-bar__link" href="#education">EDUCATION</a>
                     <a class="nav-bar__link" href="#languages">LANGUAGES</a>
+                    <a class="nav-bar__link" href="#projects">MY PROJECTS</a>
                 </nav>
             </div>
             <img class="page-header__img" src="src/img/cv_photo.jpg" alt="my pretty face">
         </div>
         <div class="header-content">
             <h1 class="header-content__name">
-            <span class="header-content__name__sub">
+            <span class="header-content__name-sub">
                 Hello, my name is<br/>
             </span>
                 Artyom Krasnitsky
@@ -39,14 +39,22 @@
         </div>
     </header>
     <main class="page-main">
-        <section class="section" id="contacts">
+        <section class="section contacts" id="contacts">
             <h2 class="section__title">Contacts</h2>
             <ul class="section__list">
-                <li><p><b>Phone:</b> +375 44 752 76 60</p></li>
-                <li><p><b>Email:</b> tyomik.krasnitsky@gmail.com</p></li>
+                <li><p><b>Phone:</b> <a href="tel:+375447527660">+375 44 752 76 60</a></p></li>
+                <li><p><b>Telegram:</b> <a href="https://t.me/ArtyomNIN" target="_blank">@ArtyomNIN</a></p></li>
+                <li><p><b>Email:</b> <a href="mailto:tyomik.krasnitsky@gmail.com">tyomik.krasnitsky@gmail.com</a></p></li>
                 <li><p><b>GitHub:</b> <a href="https://github.com/ArtyomKr" target="_blank">ArtyomKr <img src="src/img/github-logo.svg" width="23" alt="git-link"></a></p></li>
             </ul>
 
+        </section>
+        <section class="section" id="about">
+            <h2 class="section__title">About me</h2>
+            <p> Junior Web Developer with experience in both front-end and back-end development.
+                Worked on open source project and as a web administrator and engineer at a small research institute.
+                Currently looking to grow career by applying my skills to an interesting and challenging project.
+            </p>
         </section>
         <section class="section" id="employment history">
             <h2 class="section__title">Employment history</h2>
@@ -83,12 +91,64 @@
                 </li>
             </ul>
         </section>
-        <section class="section" id="about">
-            <h2 class="section__title">About me</h2>
-            <p> Junior Web Developer with experience in both front-end and back-end development.
-                Worked on open source project and as a web administrator and engineer at a small research institute.
-                Currently looking to grow career by applying my skills to an interesting and challenging project.
-            </p>
+        <section class="section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <ul class="section__list">
+                <li>JavaScript, Typescript</li>
+                <li>HTML, CSS</li>
+                <li>React, Redux</li>
+                <li>Node.js, Express, NestJS</li>
+                <li>PostgreSQL</li>
+                <li>Docker</li>
+                <li>Figma</li>
+                <li>Git</li>
+            </ul>
+        </section>
+        <section class="section" id="education">
+            <h2 class="section__title">Education</h2>
+            <ul class="section__list">
+                <li>
+                    Belarusian State University of Informatics and Radioelectronics
+                    <ul class="section__sublist">
+                        <li>Major in Computer-Aided Design of Electronic Devices</li>
+                    </ul>
+                </li>
+                <li>
+                    Courses:
+                    <ul>
+                        <li>
+                            Rolling Scopes School
+                            <ul>
+                                <li>
+                                    Javascript/Front-end <a href="https://app.rs.school/certificate/4vh0e0uv" target="_blank">Certificate</a>
+                                </li>
+                                <li>
+                                    React <a href="https://app.rs.school/certificate/clsbxg5m" target="_blank">Certificate</a>
+                                </li>
+                                <li>
+                                    NodeJS <a href="https://app.rs.school/certificate/d5zbywof" target="_blank">Certificate</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            AWS Training
+                            <ul>
+                                <li>
+                                    AWS Cloud Quest: Cloud Practitioner <a href="https://www.credly.com/badges/b303347e-3093-4b99-8877-48afee72c9d5/public_url" target="_blank">Badge</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="section" id="languages">
+            <h2 class="section__title">Languages</h2>
+            <ul class="section__list">
+                <li>Russian - native</li>
+                <li>English - B2</li>
+                <li>Belarusian - ❤</li>
+            </ul>
         </section>
         <section class="section" id="projects">
             <h2 class="section__title">My projects</h2>
@@ -100,6 +160,11 @@
                     <h3 class="project__title">Mapa project</h3>
                     <p>Mapa is an open-source interactive map for local initiatives and volunteers. It is based on React + Redux, and uses OpenStreetMaps API to fetch map data. Users can add customizable pins on a map or search for an already existing entries. </p>
                 </div>
+                <div class="skills">
+                    <span class="skill">React</span>
+                    <span class="skill">Redux</span>
+                    <span class="skill">Eslint</span>
+                </div>
             </article>
             <article class="project">
                 <a class="project__preview-link" href="https://pma-olesiklesha.netlify.app/" target="_blank">
@@ -109,41 +174,71 @@
                     <h3 class="project__title">Cream app</h3>
                     <p> A React-based kanban board with Redux for state management. Supports both Russian ang English localisations. Columns and tasks are moved with drag-and-drop with optimistic updates. I also wrote backend for this app using Node, Express and PostgreSQL.</p>
                 </div>
+                <div class="skills">
+                    <span class="skill">React</span>
+                    <span class="skill">Redux</span>
+                    <span class="skill">Express</span>
+                    <span class="skill">PostgreSQL</span>
+                    <span class="skill">Typescript</span>
+                </div>
             </article>
             <article class="project">
                 <a class="project__preview-link" href="https://rslang-romasho.netlify.app/" target="_blank">
-                    <img class="project__preview" src="src/img/languagehike.png"  alt="hospital-app screen">
+                    <img class="project__preview" src="src/img/languagehike.png"  alt="language hike screen">
                 </a>
                 <div class="project__description">
                     <h3 class="project__title">Language Hike</h3>
                     <p> A web app for learning English. Includes a set of educational language games, a schoolbook and a personal dictionary. Authorized users can track their progress and statistics. Created with React, MUI and Typescript.</p>
                 </div>
+                <div class="skills">
+                    <span class="skill">React</span>
+                    <span class="skill">Redux</span>
+                    <span class="skill">MIU</span>
+                    <span class="skill">Typescript</span>
+                </div>
             </article>
             <article class="project">
                 <a class="project__preview-link" href="https://github.com/ArtyomKr/nodejs2023Q2-service" target="_blank">
-                    <img class="project__preview" src="src/img/homelibapp.png"  alt="hospital-app screen">
+                    <img class="project__preview" src="src/img/homelibapp.png"  alt="home library service screen">
                 </a>
                 <div class="project__description">
                     <h3 class="project__title">Home library service</h3>
                     <p>A NestJS application for managing music collection. TypeORM is used for communication with Postgres DB. Includes auth logic with refresh and access tokens. App and DB are composed with Docker.</p>
                 </div>
+                <div class="skills">
+                    <span class="skill">NestJS</span>
+                    <span class="skill">Docker</span>
+                    <span class="skill">TypeORM</span>
+                    <span class="skill">Typescript</span>
+                </div>
             </article>
             <article class="project">
                 <a class="project__preview-link" href="https://mnipi.com/new-devices.html" target="_blank">
-                    <img class="project__preview" src="src/img/mnipi-landing.png"  alt="hospital-app screen">
+                    <img class="project__preview" src="src/img/mnipi-landing.png"  alt="mnipi landing screen">
                 </a>
                 <div class="project__description">
                     <h3 class="project__title">Landing page for new devices</h3>
                     <p> A simplistic landing page for a new line of electronic measuring devices from JSC MNIPI. The design was inspired by suprematism and early soviet-era posters.</p>
                 </div>
+                <div class="skills">
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">BEM</span>
+                    <span class="skill">Figma</span>
+                </div>
             </article>
             <article class="project">
                 <a class="project__preview-link" href="https://github.com/ArtyomKr/node-chat-app" target="_blank">
-                    <img class="project__preview" src="src/img/chatapp.png" alt="node-chat screen">
+                    <img class="project__preview" src="src/img/chatapp.png" alt="node chat app screen">
                 </a>
                 <div class="project__description">
                     <h3 class="project__title">Node chat app</h3>
                     <p>A simple online chatting app made with Node.js and Express. Users can create or join existing rooms, send text messages and share geolocation data.</p>
+                </div>
+                <div class="skills">
+                    <span class="skill">Node.js</span>
+                    <span class="skill">Express</span>
+                    <span class="skill">Socket.io</span>
                 </div>
             </article>
         </section>
@@ -209,7 +304,7 @@
     </main>
     <footer class="page-footer">
         <div class="page-footer__inner">
-            <p>©2021 by Artyom Krasnitsky</p>
+            <p>©2021-2023 by Artyom Krasnitsky</p>
         </div>
     </footer>
 </div>

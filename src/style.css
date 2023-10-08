@@ -72,13 +72,13 @@ a {
     color: #999999;
 }
 
-.header-content__name__sub {
+.header-content__name-sub {
     font-size: 0.5em;
     line-height: 1.5em;
 }
 
 .page-header__img {
-    width: 50%;
+    width: 70%;
 }
 
 .header-content__btn {
@@ -115,16 +115,13 @@ a {
     color: #999999;
 }
 
-.section__code {
-    margin: 0;
-}
-
-.section__code .hljs {
-    background: #F6F6F6;
-}
-
 .section__list {
     margin: 0;
+}
+
+.section.contacts a {
+    font-weight: normal;
+    text-decoration: none;
 }
 
 .job-list {
@@ -182,12 +179,18 @@ a {
     margin-left: 6%;
 }
 
-.project:nth-child(odd) .project__description {
-    text-align: right;
-}
-
 .project:last-child {
     margin-bottom: 0;
+}
+
+.skill {
+    display: inline-block;
+    padding: 0 10px;
+    margin-bottom: 5px;
+    background-color: #EDEDED;
+    border-radius: 16px;
+    line-height: 32px;
+    color: #666666;
 }
 
 .page-footer {
@@ -218,16 +221,14 @@ a {
         font-size: 12px;
     }
 
-    .header-content__name__sub {
+    .header-content__name-sub {
         font-size: 0.6em;
     }
 
     .page-header__inner {
         padding-bottom: 15vw;
     }
-}
 
-@media (max-width: 620px) {
     .section__title {
         font-size: 2rem;
         margin: 10px 0 5px 0;
