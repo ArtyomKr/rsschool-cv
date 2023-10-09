@@ -70,6 +70,7 @@ a {
     font-size: 5em;
     line-height: 1em;
     color: #999999;
+    text-shadow: 5px 5px #FFE8E8;
 }
 
 .header-content__name-sub {
@@ -77,8 +78,34 @@ a {
     line-height: 1.5em;
 }
 
-.page-header__img {
-    width: 70%;
+.img-container {
+    position: relative;
+    width: 50%;
+}
+
+.img-container__img, .img-container__caption {
+    width: 100%;
+    float: right;
+}
+
+.img-container:hover .img-container__caption {
+    visibility: visible;
+    opacity: 1;
+}
+
+.img-container__caption {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 5px 0;
+    background-color: #666666;
+    color: #EDEDED;
+
+
+    opacity: 0;
+    transition: 0.8s;
 }
 
 .header-content__btn {
@@ -241,7 +268,7 @@ a {
         padding-left: 10px;
     }
 
-    .page-header__img {
+    .img-container {
         width: 83%;
     }
 
