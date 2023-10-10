@@ -31,7 +31,7 @@ a {
 
     margin-left: 15%;
 
-    background: #efeff1;
+    background: #F6F6F6;
 }
 
 .hamburger-menu {
@@ -61,21 +61,21 @@ a {
     max-width: 60%;
     height: 0;
     position: relative;
-    top: -400px;
+    top: -340px;
     margin: 0 1rem 0 5%;
 }
 
 .header-content__name {
     margin-bottom: 0.2em;
-    font-size: 5em;
+    font-size: 4em;
     line-height: 1em;
     color: #999999;
-    text-shadow: 5px 5px #FFE8E8;
 }
 
 .header-content__name-sub {
     font-size: 0.5em;
     line-height: 1.5em;
+    text-shadow: none;
 }
 
 .img-container {
@@ -241,9 +241,9 @@ a {
     .header-content {
         max-width: 100%;
         margin-right: 0;
-        top: -31vw;
+        top: -23vw;
         height: initial;
-        margin-bottom: -31vw;
+        margin-bottom: -23vw;
 
         font-size: 12px;
     }
@@ -316,10 +316,12 @@ a {
         background-color: #000000;
         transition-duration: .25s;
     }
+
     .menu__btn > span::before {
         content: '';
         top: -8px;
     }
+
     .menu__btn > span::after {
         content: '';
         top: 8px;
@@ -353,16 +355,31 @@ a {
     #menu__toggle:checked ~ .menu__btn > span {
         transform: rotate(45deg);
     }
+
     #menu__toggle:checked ~ .menu__btn > span::before {
         top: 0;
         transform: rotate(0);
     }
+
     #menu__toggle:checked ~ .menu__btn > span::after {
         top: 0;
         transform: rotate(90deg);
     }
+
     #menu__toggle:checked ~ .nav-bar {
         visibility: visible;
         left: 0;
+    }
+
+    #menu__toggle:checked ~ .menu__overlay{
+        display: block;
+        position: fixed;
+        background-color: #00000080;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 1;
     }
 }
