@@ -383,3 +383,23 @@ a {
         z-index: 1;
     }
 }
+
+@media (max-width: 425px) {
+    .page-header__inner {
+        padding-bottom: 50vw;
+    }
+
+    .img-container {
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        width: initial;
+    }
+
+    .header-content {
+        top: -55vw;
+        margin-bottom: -55vw;
+        margin-left: 5%;
+    }
+}
