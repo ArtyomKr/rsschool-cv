@@ -31,7 +31,7 @@ a {
 
     margin-left: 15%;
 
-    background: #efeff1;
+    background: #F6F6F6;
 }
 
 .hamburger-menu {
@@ -57,20 +57,77 @@ a {
     background-color: #FFE8E8;
 }
 
-.page-header__name {
-    max-width: 50%;
+.header-content {
+    max-width: 60%;
     height: 0;
     position: relative;
-    top: -200px;
+    top: -340px;
     margin: 0 1rem 0 5%;
+}
 
-    font-size: 5rem;
-    line-height: 80px;
+.header-content__name {
+    margin-bottom: 0.2em;
+    font-size: 4em;
+    line-height: 1em;
     color: #999999;
 }
 
-.page-header__img {
+.header-content__name-sub {
+    font-size: 0.5em;
+    line-height: 1.5em;
+    text-shadow: none;
+}
+
+.img-container {
+    position: relative;
     width: 50%;
+}
+
+.img-container__img, .img-container__caption {
+    width: 100%;
+    float: right;
+}
+
+.img-container:hover .img-container__caption {
+    visibility: visible;
+    opacity: 1;
+}
+
+.img-container__caption {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 5px 0;
+    background-color: #666666;
+    color: #EDEDED;
+
+
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.header-content__btn {
+    width: 14em;
+    line-height: 5em;
+    display: block;
+
+    font-size: 1.3em;
+    font-family: Poppins, sans-serif;
+    font-weight: normal;
+    color: #3e3e3e;
+    letter-spacing: 0.3em;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition-duration: 0.5s;
+
+    background-color: #FFE8E8;
+}
+
+.header-content__btn:hover {
+    transform: translateY(-5px);
 }
 
 .page-main {
@@ -85,16 +142,44 @@ a {
     color: #999999;
 }
 
-.section__code {
-    margin: 0;
-}
-
-.section__code .hljs {
-    background: #F6F6F6;
-}
-
 .section__list {
     margin: 0;
+}
+
+.section.contacts a {
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.job-list {
+    padding: 0;
+}
+
+.job {
+    display: flex;
+    align-items: baseline;
+}
+
+.job__intro {
+    width: 30%;
+}
+
+.job__details {
+    width: 70%;
+}
+
+.job__company {
+    font-size: 1.3em;
+}
+
+.job__date {
+    font-size: 0.8em;
+    color: #7E7C7C;
+    text-transform: uppercase;
+}
+
+.job__title {
+    font-weight: 600;
 }
 
 .project {
@@ -121,12 +206,18 @@ a {
     margin-left: 6%;
 }
 
-.project:nth-child(odd) .project__description {
-    text-align: right;
-}
-
 .project:last-child {
     margin-bottom: 0;
+}
+
+.skill {
+    display: inline-block;
+    padding: 0 10px;
+    margin-bottom: 5px;
+    background-color: #EDEDED;
+    border-radius: 16px;
+    line-height: 32px;
+    color: #666666;
 }
 
 .page-footer {
@@ -142,31 +233,33 @@ a {
     text-align: center;
 }
 
-.page-footer__logos {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
 #menu__toggle {
     display: none;
 }
 
-@media (max-width: 900px) {
-    .page-header__name {
-        top: -15vw;
+@media (max-width: 768px) {
+    .header-content {
         max-width: 100%;
         margin-right: 0;
+        top: -23vw;
+        height: initial;
+        margin-bottom: -23vw;
 
-        font-size: 9vw;
+        font-size: 12px;
+    }
+
+    .header-content__name-sub {
+        font-size: 0.6em;
     }
 
     .page-header__inner {
         padding-bottom: 15vw;
     }
-}
 
-@media (max-width: 650px){
+    .section__title {
+        font-size: 2rem;
+        margin: 10px 0 5px 0;
+    }
     .page-body {
         margin: 0;
     }
@@ -175,8 +268,20 @@ a {
         padding-left: 10px;
     }
 
-    .page-header__img {
+    .img-container {
         width: 83%;
+    }
+
+    .job {
+        flex-direction: column;
+    }
+
+    .job__intro {
+        width: auto;
+    }
+
+    .job__details {
+        width: auto;
     }
 
     .project__preview-link {
@@ -211,10 +316,12 @@ a {
         background-color: #000000;
         transition-duration: .25s;
     }
+
     .menu__btn > span::before {
         content: '';
         top: -8px;
     }
+
     .menu__btn > span::after {
         content: '';
         top: 8px;
@@ -248,23 +355,51 @@ a {
     #menu__toggle:checked ~ .menu__btn > span {
         transform: rotate(45deg);
     }
+
     #menu__toggle:checked ~ .menu__btn > span::before {
         top: 0;
         transform: rotate(0);
     }
+
     #menu__toggle:checked ~ .menu__btn > span::after {
         top: 0;
         transform: rotate(90deg);
     }
+
     #menu__toggle:checked ~ .nav-bar {
         visibility: visible;
         left: 0;
     }
+
+    #menu__toggle:checked ~ .menu__overlay{
+        display: block;
+        position: fixed;
+        background-color: #00000080;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 1;
+    }
 }
 
-@media (max-width: 400px) {
-    .section__title {
-        font-size: 2rem;
-        margin: 10px 0 5px 0;
+@media (max-width: 425px) {
+    .page-header__inner {
+        padding-bottom: 50vw;
+    }
+
+    .img-container {
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        width: initial;
+    }
+
+    .header-content {
+        top: -55vw;
+        margin-bottom: -55vw;
+        margin-left: 5%;
     }
 }
